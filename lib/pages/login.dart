@@ -1,6 +1,7 @@
 // login.dart
 
 import 'package:flutter/material.dart';
+import 'package:whisper_desktop/layouts/main.dart';
 import 'package:whisper_desktop/pages/report_feeds.dart';
 
 class LoginPage extends StatefulWidget {
@@ -30,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
     // Navigate to the next page or show a success message
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => ReportPage()),
+      MaterialPageRoute(builder: (context) => MainLayout()),
     );
   }
 

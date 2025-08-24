@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:whisper_desktop/pages/login.dart';
 
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final routeProvider = Provider((_) => 0);
+
 void main() {
-  runApp(const MyApp());
+  runApp(ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
