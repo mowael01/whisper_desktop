@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:whisper_desktop/main.dart';
-import 'package:whisper_desktop/pages/login.dart';
 import 'package:whisper_desktop/pages/report_feeds.dart';
 
 // Create a proper StateNotifier for route management
@@ -107,7 +105,7 @@ class MainLayoutState extends ConsumerState<MainLayout> {
               // Update the route when page changes via swipe
               ref.read(routeProvider.notifier).setRoute(index);
             },
-            children: [ReportPage(), LoginPage()],
+            children: [ReportPage()],
           ),
         ),
       ],
