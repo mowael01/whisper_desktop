@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whisper_desktop/pages/home_page.dart';
 import 'package:whisper_desktop/pages/login_page.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -18,12 +19,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Whisper Desktop',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Color.fromARGB(255, 35, 73, 243),
-        ),
-        useMaterial3: true,
-      ),
+      locale: Locale('ar', 'SA'),
+      routes: {
+        '/home': (context) => HomePage(),
+        '/login': (context) => LoginPage(),
+      },
+
+      theme: ThemeData(colorScheme: ColorScheme.light(), useMaterial3: true),
       home: LoginPage(),
     );
   }

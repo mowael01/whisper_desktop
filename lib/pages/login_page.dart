@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:whisper_desktop/layouts/main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:whisper_desktop/pages/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -31,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
     // Navigate to the next page or show a success message
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => MainLayout()),
+      MaterialPageRoute(builder: (context) => HomePage()),
     );
   }
 
